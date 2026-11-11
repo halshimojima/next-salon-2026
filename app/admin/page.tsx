@@ -1,8 +1,13 @@
+import SectionHeading from "@/components/SectionHeading"
+
 export default function AdminPage() {
   return (
-    <section className="py-12">
-      <p className="text-sm font-semibold text-slate-500">ADMIN</p>
-      <h1 className="mt-2 text-4xl font-bold text-slate-900">管理者</h1>
-    </section>
-  );
+    <div>
+      <SectionHeading
+        eyebrow="Dashboard"
+        title="管理者ダッシュボード"
+        description="予約状況やメニュー、店舗情報の管理はこちらから行えます。"
+      />
+    </div>
+  )
 }

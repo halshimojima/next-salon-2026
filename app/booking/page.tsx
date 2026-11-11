@@ -1,8 +1,13 @@
+import SectionHeading from "@/components/SectionHeading"
+
 export default function BookingPage() {
   return (
-    <section className="py-12">
-      <p className="text-sm font-semibold text-slate-500">BOOKING</p>
-      <h1 className="mt-2 text-4xl font-bold text-slate-900">予約</h1>
-    </section>
-  );
+    <div>
+     <SectionHeading
+        eyebrow="Bookings"
+        title="予約一覧"
+        description="利用者のニーズや予約状況に合わせて選べるよう、切り口を変えて提案します。"
+      /> 
+    </div>
+  )
 }

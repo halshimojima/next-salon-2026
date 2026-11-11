@@ -1,0 +1,29 @@
+# Next Salon 課題：APIからショップ一覧を表示
+
+## 実装内容
+- `app/api/shops/route.ts`: `GET /api/shops` で `{ shops: [...] }` をJSON返却（既存のAPIを利用）
+- `app/page.tsx`: ブラウザから `fetch('/api/shops')` を呼び出し、取得した店舗を `ShopCard` で表示
+- 読み込み中・通信エラー・0件の場合の表示を追加
+- 店舗詳細、予約、管理者ページなど既存機能は保持
+
+## 動作確認
+1. プロジェクトのフォルダーで `npm install`
+2. `npm run dev`
+3. `http://localhost:3000/api/shops` にアクセスし、`shops` 配列のJSONが表示されることを確認
+4. `http://localhost:3000/` にアクセスし、ショップカードが表示されることを確認
+5. 各カードの「詳細を見る」を押し、店舗詳細画面に移動できることを確認
+
+## GitHubに提出
+GitHubからZIPをダウンロードしたフォルダーには `.git` が含まれない場合があります。
+既存の自分のリポジトリを `git clone` して、その中へ変更したファイルをコピーするのが安全です。
+
+```powershell
+git clone https://github.com/halshimojima/next-salon-2026.git
+cd next-salon-2026
+# 完成版の app/page.tsx をこのフォルダーの app/page.tsx にコピー
+git add app/page.tsx
+git commit -m "Fetch shops from Next.js API on home page"
+git push origin main
+```
+
+すでに `.git` のある作業フォルダーがある場合は、そこに `app/page.tsx` をコピーし、最後の3コマンドを実行してください。
